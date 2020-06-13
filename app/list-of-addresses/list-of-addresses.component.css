@@ -1,0 +1,26 @@
+p {
+    text-indent: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#link{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+#link:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+#link:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+#link:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  }
