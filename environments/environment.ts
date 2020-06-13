@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   firebase : {
-    apiKey: "", //Removed for safety purpose
+    apiKey: "", //Removed for security reasons
     authDomain: "addresspage-c1da6.firebaseapp.com",
     databaseURL: "https://addresspage-c1da6.firebaseio.com",
     projectId: "addresspage-c1da6",
