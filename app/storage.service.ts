@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Storage } from 'src/app/storage.model';
-import { Router } from '@angular/router';
-// import { AddAddressComponent } from './add-address/add-address.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +11,7 @@ export class StorageService {
   //'/retrieve' and '/add' component
   address : any = new Storage('', '', '', '', '', '', '', '', '', '', '');
 
-  constructor(private firestore: AngularFirestore, private router : Router) { }
+  constructor(private firestore: AngularFirestore) { }
 
   //Adds a new address
   createAddress(storage : Storage){
