@@ -1,18 +1,26 @@
-<p class = "h2 mb-2" style="margin-top : 50px;">Your addresses</p>
-<div style = "background-color: grey;" class = "container-fluid"  *ngFor = "let add of addresses">
-    <div style="width: 300px; float : left; height:230px; line-height : 0.3; margin:10px; border-style: outset; text-align: left;">
-        <p style = "margin-top: 20px;"><b>{{add.addressId.name}}</b></p>
-        <p>{{add.addressId.flat}}</p>
-        <p>{{add.addressId.area}}</p>
-        <p>{{add.addressId.landmark}}</p>
-        <p>{{add.addressId.town}}, {{add.addressId.state}} {{add.addressId.PIN}}</p>
-        <p>{{add.addressId.country}}</p>
-        <p>Phone number : {{add.addressId.phone}}</p>
-        <p style = "font-style: italic;">{{add.addressId.address_type}}</p>
-        <div style = "text-indent: 1.5em; line-height: 2;">
-            <a id = "link" (click) = "updateAddress(add)">edit</a>
-            <span> |  </span> 
-            <a id = "link" (click) = "deleteAddress(add)">delete</a> 
+<div>
+    <p class = "h2 mb-2" id = "para_1">Your addresses</p>
+    
+    <div id = "div_1" class = "container-fluid"  *ngFor = "let add of addresses">
+    
+        <div id = "div_2">
+
+            <p id = "para_2"><b>{{add.addressId.name}}</b></p>
+            <p>{{add.addressId.flat}}</p>
+            <p>{{add.addressId.area}}</p>
+            <p>{{add.addressId.landmark}}</p>
+            <p>{{add.addressId.town}}, {{add.addressId.state}} {{add.addressId.PIN}}</p>
+            <p>{{add.addressId.country}}</p>
+            <p>Phone number : {{add.addressId.phone}}</p>
+            <p id = "para_3">{{add.addressId.address_type}}</p>
+            
+            <div id = "div_3">
+                <a id = "link" (click) = "updateAddress(add)">edit</a>
+                <span> | </span> 
+                <a id = "link" (click) = "deleteAddress(add)">delete</a> 
+            </div>
+
         </div>
+
     </div>
 </div>

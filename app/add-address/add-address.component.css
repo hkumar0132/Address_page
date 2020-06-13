@@ -1,3 +1,45 @@
+#body {
+    margin-top: 75px;
+}
+
+#div_1 {
+    width: 640px; 
+    line-height: 1.1; 
+    background : #ffa500; 
+    float : right;
+    margin-bottom: 0px;
+}
+
+#div_2 {
+    text-align: center;
+}
+
+#red {
+    color : red;
+}
+
+#para_1 {
+    text-align: center; 
+    line-height: 2.5;
+}
+
+nav {
+    float: left; 
+    width: 700px; 
+    margin-bottom: 25px;
+
+
+}
+
+li {
+    margin-left : 20px;
+}
+
+button {
+    margin-top : 20px;
+    margin-bottom : 20px;
+}
+
 p {
     text-indent: 1.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;

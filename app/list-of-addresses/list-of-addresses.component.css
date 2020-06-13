@@ -1,3 +1,34 @@
+#para_1 {
+  margin-top : 50px;
+}
+
+#div_1 {
+  background-color: grey;
+}
+
+#div_2 {
+  width: 300px; 
+  float : left; 
+  height:230px; 
+  line-height : 0.3; 
+  margin:10px; 
+  border-style: outset;
+  text-align: left;
+}
+
+#para_2 {
+  margin-top: 20px;
+}
+
+#para_3 {
+  font-style: italic;
+}
+
+#div_3 {
+  text-indent: 1.5em;
+  line-height: 2;
+}
+
 p {
     text-indent: 1.5em;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -7,20 +38,22 @@ p {
     color: blue;
     background-color: transparent;
     text-decoration: none;
-  }
+}
+
 #link:visited {
     color: pink;
     background-color: transparent;
     text-decoration: underline;
-  }
+}
+
 #link:hover {
     color: red;
     background-color: transparent;
     text-decoration: underline;
-  }
+}
 
 #link:active {
     color: yellow;
     background-color: transparent;
     text-decoration: underline;
-  }
+}

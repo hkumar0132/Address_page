@@ -1,16 +1,15 @@
-<body style = "margin-top: 75px;">
+<div id = "body">
     <img src = "http://www.pngall.com/wp-content/uploads/2016/06/Ecommerce-PNG-Clipart.png"
         width = "700px" height = "850px">
 
-    <div class = "inline-block container-fluid " style = "width: 640px; line-height: 1.1; background : #ffa500; float : right;
-        margin-bottom: 0px;">
+    <div class = "inline-block container-fluid " id = "div_1">
 
-        <form #userForm = "ngForm" (ngSubmit) = "onSubmit(); userForm.reset()" novalidate>
-          <p class = "h2 mb-2" style = "text-align: center; line-height: 2.5;">Add a new address</p>      
+        <form #userForm = "ngForm" (ngSubmit) = "onSubmit()" novalidate>
+          <p class = "h2 mb-2" id = "para_1">Add a new address</p>      
 
           <div class = "form-group">
 
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>Full name  </b></label>
 
             <input value = "{{address.name}}" #name = "ngModel" [class.is-invalid] = "name.invalid && name.touched" required
@@ -18,14 +17,14 @@
               class = "form-control">
 
             <div *ngIf = "name.errors && (name.invalid || name.touched)">
-              <small style = "color : red" *ngIf = "name.errors.required && name.touched"><b>It cannot be empty</b></small>
+              <small id = "red" *ngIf = "name.errors.required && name.touched"><b>It cannot be empty</b></small>
             </div> 
 
           </div>
 
           <div class = "form-group">
             
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>Mobile number  </b></label>
 
             <input value = "{{address.phone}}" #phone = "ngModel" [class.is-invalid] = "phone.invalid && phone.touched" required 
@@ -33,15 +32,15 @@
               [ngModelOptions]="{standalone: true}" class = "form-control" placeholder = "10-digit mobile number without prefixes">
 
             <div *ngIf = "phone.errors && (phone.invalid || phone.touched)">
-              <small style = "color : red" *ngIf = "phone.errors.required && phone.touched"><b>Mobile number is required</b></small>
-              <small style = "color : red" *ngIf = "phone.errors.pattern && phone.touched"><b>Invalid mobile number</b></small>
+              <small id = "red" *ngIf = "phone.errors.required && phone.touched"><b>Mobile number is required</b></small>
+              <small id = "red" *ngIf = "phone.errors.pattern && phone.touched"><b>Invalid mobile number</b></small>
             </div>
 
           </div>
 
           <div class = "form-group">
 
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>PIN code</b></label>
 
             <input value = "{{address.PIN}}" #pin = "ngModel" [class.is-invalid] = "pin.invalid && pin.touched" required type = "text"
@@ -49,15 +48,15 @@
                 [ngModelOptions] = "{standalone: true}" class = "form-control" placeholder = "6-digit[0-9] PIN code">
 
             <div *ngIf = "pin.errors && (pin.invalid || pin.touched)">
-              <small style = "color : red" *ngIf = "pin.errors.required && pin.touched"><b>PIN code is required</b></small>
-              <small style = "color : red" *ngIf = "pin.errors.pattern && pin.touched"><b>Invalid PIN code</b></small>
+              <small id = "red" *ngIf = "pin.errors.required && pin.touched"><b>PIN code is required</b></small>
+              <small id = "red" *ngIf = "pin.errors.pattern && pin.touched"><b>Invalid PIN code</b></small>
             </div>
 
           </div>
 
           <div class = "form-group">
 
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>Flat, House no., Building, Company, Apartment  </b></label>
 
             <input value = "{{address.flat}}" #flat = "ngModel" [class.is-invalid] = "flat.invalid && flat.touched" required 
@@ -65,14 +64,14 @@
               class = "form-control">
 
             <div *ngIf = "flat.errors && (flat.invalid || flat.touched)">
-              <small style = "color : red" *ngIf = "flat.errors.required && flat.touched"><b>It cannot be empty</b></small>
+              <small id = "red" *ngIf = "flat.errors.required && flat.touched"><b>It cannot be empty</b></small>
             </div>           
 
           </div>
 
           <div class = "form-group">
 
-            <label style = "color : red">#</label>
+            <label id = "red">#</label>
             <label><b>Area, Colony, Street, Sector, Village  </b></label>
 
             <input value = "{{address.area}}" #area = "ngModel" [class.is-invalid] = "area.invalid && area.touched" required 
@@ -80,7 +79,7 @@
                 class = "form-control">
 
             <div *ngIf = "area.errors && (area.invalid || area.touched)">
-              <small style = "color : red" *ngIf = "area.errors.required && area.touched"><b>It cannot be empty</b></small>
+              <small id = "red" *ngIf = "area.errors.required && area.touched"><b>It cannot be empty</b></small>
             </div> 
 
           </div>
@@ -95,7 +94,7 @@
 
           <div class = "form-group">  
 
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>Town/City  </b></label>
 
             <input value = "{{address.town}}" #town = "ngModel" [class.is-invalid] = "town.invalid && town.touched" required 
@@ -103,29 +102,29 @@
             class = "form-control">
 
             <div *ngIf = "town.errors && (town.invalid || town.touched)">
-              <small style = "color : red" *ngIf = "town.errors.required && town.touched"><b>It cannot be empty</b></small>
+              <small id = "red" *ngIf = "town.errors.required && town.touched"><b>It cannot be empty</b></small>
             </div> 
 
           </div>
 
           <div class = "form-group"> 
 
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>State / Province / Region  </b></label>
             <input value = "{{address.state}}" value = "{{address.state}}" #state = "ngModel" [class.is-invalid] = "state.invalid && state.touched" required 
             type = "text" id = "state" pattern = "^[a-zA-Z]*$" 
             [(ngModel)] = "address.state" [ngModelOptions]="{standalone: true}" class = "form-control">
 
             <div *ngIf = "state.errors && (state.invalid || state.touched)">
-              <small style = "color : red" *ngIf = "state.errors.required && state.touched"><b>It cannot be empty</b></small>
-              <small style = "color : red" *ngIf = "state.errors.pattern && state.touched"><b>Invalid</b></small>
+              <small id = "red" *ngIf = "state.errors.required && state.touched"><b>It cannot be empty</b></small>
+              <small id = "red" *ngIf = "state.errors.pattern && state.touched"><b>Invalid</b></small>
             </div>
 
           </div> 
 
           <div class = "form-group">
 
-            <label style="color : red">#</label>
+            <label id = "red">#</label>
             <label><b>Country/region  </b></label>
 
             <input value = "{{address.country}}" value = "{{address.country}}" #country = "ngModel" [class.is-invalid] = "country.invalid && country.touched" required type = "text" 
@@ -133,53 +132,53 @@
               [ngModelOptions]="{standalone: true}" class = "form-control">
 
             <div *ngIf = "country.errors && (country.invalid || country.touched)">
-              <small style = "color : red" *ngIf = "country.errors.required && country.touched"><b>Country name is required</b></small>
-              <small style = "color : red" *ngIf = "country.errors.pattern && country.touched"><b>Invalid country name</b></small>
+              <small id = "red" *ngIf = "country.errors.required && country.touched"><b>Country name is required</b></small>
+              <small id = "red" *ngIf = "country.errors.pattern && country.touched"><b>Invalid country name</b></small>
             </div>
 
           </div>
 
           <div>
-            <label style="color : red">#</label> <b>are required fields</b>
+            <label id = "red">#</label> <b>are required fields</b>
           </div>
-          <div style = "text-align: center;">
-            <button (click) = "onSubmit(); userForm.reset()" style = "margin-top : 20px; margin-bottom : 20px" class = "btn btn-success">
+          <div id = "div_2">
+            <button [disabled] = "!userForm.valid" (click) = "onSubmit()" class = "btn btn-success">
               Submit  
             </button>
           </div>
         </form>
     </div>
   
-    <nav class="navbar navbar-expand-sm btn btn-dark" style = "float: left; width: 700px; margin-bottom: 25px;">
+    <nav class = "navbar navbar-expand-sm btn btn-dark">
       <a class="h2 mb-2">E-commerce</a>
       <div>
           <ul class="navbar-nav"> 
         
-              <li class = "nav-item"  style = "margin-left: 25px"> 
+              <li class = "nav-item"> 
                   <a href="https://www.facebook.com" class="fa fa-facebook"></a>
               </li>
 
-              <li class = "nav-item"  style = "margin-left: 20px">
+              <li class = "nav-item">
                   <a href="https://www.twitter.com" class="fa fa-twitter"></a>
               </li>
 
-              <li class = "nav-item"  style = "margin-left: 20px">
+              <li class = "nav-item">
                   <a href="https://www.google.com" class="fa fa-google"></a>
               </li>
 
-              <li class = "nav-item"  style = "margin-left: 20px">
+              <li class = "nav-item">
                   <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
               </li>
 
-              <li class = "nav-item"  style = "margin-left: 20px">
+              <li class = "nav-item">
                   <a href="https://www.youtube.com" class="fa fa-youtube"></a>
               </li>
 
-              <li class = "nav-item"  style = "margin-left: 20px;">
+              <li class = "nav-item">
                   <a href="https://www.instagram.com" class="fa fa-instagram"></a>
               </li>
 
           </ul>
       </div>
     </nav>
-</body> 
+  </div> 
