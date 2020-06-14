@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Storage } from 'src/app/storage.model';
 import { StorageService } from 'src/app/storage.service';
 import { Router } from '@angular/router';
@@ -23,20 +23,28 @@ import { HttpClient } from '@angular/common/http';
     state : string;
 */ 
 
-export class AddAddressComponent {
+export class AddAddressComponent implements OnInit {
 
-  address : Storage;
+  address : Storage = {   'uid' : '1' ,
+                      'addressId' : '',
+                      'country' : '', 
+                      'name' : '',
+                      'phone' : '',
+                      'PIN' : '',
+                      'flat' : '',
+                      'area' : '',
+                      'landmark' : '',
+                      'town' : '',
+                      'state' : '' };
 
-  constructor(private storageService : StorageService, private router : Router, private httpClient: HttpClient) {  
+  constructor(private storageService : StorageService, private router : Router, private httpClient: HttpClient) { }
 
-      this.address = new Storage('', '', '', '', '', '', '', '', '', '', '');
-      
+  ngOnInit(): void {
       //Copying data from storageService 
       //to set in the form when user wants to update
       //any address
-      if(this.storageService.address) 
+      if(this.storageService.address && this.storageService.address.addressId) 
         this.address = this.storageService.address.addressId;
-
   }
 
   /*This function is called when PIN has
@@ -66,7 +74,11 @@ export class AddAddressComponent {
       else {
 
           this.storageService.createAddress({...this.address});
-          alert('New address successfully added!');
+
+          if(this.storageService.address == {})
+            alert('New address successfully added!');
+          else
+            alert('Address updated succesfully');
 
           //Navigating to the '/retrieve' route
           //to show the list of addresses after
@@ -79,7 +91,8 @@ export class AddAddressComponent {
       //any address
       if(this.storageService.address) 
         this.storageService.deleteAddress(this.storageService.address.uid);
-
+      
+      this.storageService.address = {};
   }
 
 }

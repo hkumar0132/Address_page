@@ -1,6 +1,5 @@
 export class Storage {
     constructor(
-        
         //Unique id assigned to each address
         public uid : string,
         public addressId : string,

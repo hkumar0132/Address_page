@@ -139,13 +139,16 @@
           </div>
 
           <div>
-            <label id = "red">#</label> <b>are required fields</b>
+            <label id = "red">#</label>
+             <b>are required fields</b>
           </div>
+
           <div id = "div_2">
-            <button [disabled] = "!userForm.valid" (click) = "onSubmit()" class = "btn btn-success">
+            <button (click) = "onSubmit()" class = "btn btn-success">
               Submit  
             </button>
           </div>
+          
         </form>
     </div>
   
