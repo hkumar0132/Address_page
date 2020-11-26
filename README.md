@@ -1,8 +1,5 @@
-# Address_page
+# Address_page of an e-commerce platform
 
--A learning project built with angular 9 and bootstrap
--It contains two web pages: 
-  a. A form to add addresses for a user-
-    i. Automatic filling up of country and state fields based on pincode
-  b. List of addressed added-
-    i. Update and delete the address
+- CRUD operation with angular 9 and firebase which contains two web pages: 
+  a. A form to add addresses for a user -> Automatic filling up of country and state fields based on pincode
+  b. List of addresses added -> Update and delete the address
